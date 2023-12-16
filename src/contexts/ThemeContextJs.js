@@ -2,18 +2,18 @@
 import { createContext, useState } from "react"
 
 
-export const ThemeContext = createContext(null)
+const ThemeContext = createContext(null)
 
 
-export default function ThemeProvider({children}) {
-    const [theme, setTheme] = useState("light")
+export default function ThemeProvider ({children}) {
+  const [theme, setTheme] = useState("light")
 
 
 
-    const contextValue = {
-        theme,
-        setTheme,
-    }
+  const contextValue = {
+    theme,
+    setTheme,
+  }
 
   return (
     <ThemeContext.Provider value={contextValue}>

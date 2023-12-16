@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/contexts/ThemeContextd.js", "src/app/(fetch-api)/promise/page.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/contexts/ThemeContextd.js", "src/app/(fetch-api)/promise/page.js", "src/app/(react-hooks)/(useReducer)/usereducer/page.jsx", "src/app/(react-hooks)/(useReducer)/usereducer/page.jsx"],
   "exclude": ["node_modules"]
 }

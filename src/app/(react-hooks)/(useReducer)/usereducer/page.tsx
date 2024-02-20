@@ -1,18 +1,18 @@
 "use client"
-
 import React, { useState, useReducer} from 'react'
 
-const initialState = {
-  count: 0
-};
 
 
 type State = {
   count: number,
 }
 
+type Action = {type: "INCREMENT"} | {type: "DECREMENT"} | {type: "RESET"}
 
-type Action = { type: "INCREMENT" } | {type: "DECREMENT"} | {type: "RESET"}
+
+const initialState = {
+  count: 0
+};
 
 
 
@@ -23,7 +23,7 @@ const reducer = (state: State, action: Action) => {
     case "DECREMENT":
       return { count: state.count - 1}
     case "RESET": 
-       return { count: 0}
+      return { count: 0}
     default: 
       throw new Error
   }
@@ -34,6 +34,7 @@ const reducer = (state: State, action: Action) => {
 
 export default function Counter () {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [data, setData] = useState<number>(0)
 
   return (
     <div className='grid place-content-center py-8 bg-green-500 gap-2'>

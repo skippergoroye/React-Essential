@@ -6,6 +6,6 @@ export default function Axios() {
 
   2. // Async await
   return (
-    <div>page</div>
+    <div>page axios</div>
   )
 }
